@@ -1,0 +1,15 @@
+<testsuites>
+    <testsuite name="PHP Unit Testing">
+        <directory suffix="Test.php" phpVersion="7.1.3" phpVersionOperator=">=">./bastas-service-locator/tests</directory>
+    </testsuite>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./bastas-service-locator/src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="./bastas-service-locator/tests/code-coverage-reports/clover.xml"/>
+        <log type="coverage-html" target="./bastas-service-locator/tests/code-coverage-reports/" charset="UTF-8" yui="true" highlight="true" lowUpperBound="35" highLowerBound="70" />
+        <log type="testdox-text" target="./bastas-service-locator/tests/code-coverage-reports/executed.txt"/>
+    </logging>
+</testsuites>
